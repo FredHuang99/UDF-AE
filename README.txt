@@ -19,9 +19,9 @@ Then input the intermediate file and the source flow field into the visualizatio
 
 Visualization project
 Use filter_streamlines.py and generate_data.py to create a pycharm project. 
-Input the serial numbers of streamlines that you want to visualize in '.npy' format and the source flow filed in '.vtk' format. 
+Input the serial numbers of streamlines that you want to visualize in '.npy' format(e.g. If there are 2080 streamlines in a flow field and you want to visualize the 5th streamline. So you need to create a numpy array 'A' which is all zero and the length is 2080 then set the A[4] to 1.) and the source flow filed in '.vtk' format. 
 After you gain the output flow field in '.vtk' format visualize it by ParaView.
-The way to use filter_streamlines is simple, you only need to change 'file_path' and 'r_path' in if __name__ == '__main__': and change 'output_path' in   self.__save_fs(vtk_file_path, 'output_path') according to the comment.
+The way to use filter_streamlines is simple, you only need to change 'file_path' and 'r_path' in if __name__ == '__main__': and change 'output_path' in self.__save_fs(vtk_file_path, 'output_path') according to the comment.
 
 Notes
 You can download Experiment_input_and_output.rar(intermediate files of these two experiment and the output) by https://1drv.ms/u/s!AhcOo7TAXvAoinm9vuk1DbfoJi0K?e=aFUaVA.
